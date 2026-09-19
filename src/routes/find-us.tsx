@@ -5,7 +5,7 @@ import { InquiryForm } from "@/components/inquiry-form";
 import { pick, useLanguage } from "@/lib/i18n";
 
 export const Route = createFileRoute("/find-us")({
-  head: () => ({ meta: [{ title: "Jak nas znaleźć — Auto Parts Store in Maldyty" }, { name: "description", content: "Mapa, adres i formularz kontaktowy Auto Parts Store in Maldyty, ul. Prusa 5." }, { property: "og:title", content: "Jak nas znaleźć — Auto Parts Store in Maldyty" }, { property: "og:description", content: "Odwiedź sklep przy ul. Prusa 5 w Małdytach lub wyślij zapytanie." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }),
+  head: () => ({ meta: [{ title: "Jak nas znaleźć — Auto Parts Store in Maldyty ... " }, { name: "description", content: "Mapa, adres i formularz kontaktowy Auto Parts Store in Maldyty, ul. Prusa 5." }, { property: "og:title", content: "Jak nas znaleźć — Auto Parts Store in Maldyty" }, { property: "og:description", content: "Odwiedź sklep przy ul. Prusa 5 w Małdytach lub wyślij zapytanie." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }),
   component: FindUsPage,
 });
 
