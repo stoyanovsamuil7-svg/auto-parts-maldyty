@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, CircleDot, Cog, Droplets, Gauge, Lightbulb, Settings2, SparkPlug, Wind } from "lucide-react";
+import { ArrowRight, CircleDot, Cog, Droplets, Gauge, Lightbulb, PlugZap, Settings2, Wind } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { pick, useLanguage } from "@/lib/i18n";
 
@@ -12,7 +12,7 @@ const groups = [
   { icon: CircleDot, pl: "Układ hamulcowy", en: "Brake system", plItems: ["Klocki i tarcze", "Szczęki i bębny", "Zaciski i przewody", "Płyny hamulcowe"], enItems: ["Pads and discs", "Shoes and drums", "Calipers and hoses", "Brake fluids"] },
   { icon: Droplets, pl: "Oleje i filtry", en: "Oils and filters", plItems: ["Oleje silnikowe", "Filtry oleju i paliwa", "Filtry powietrza", "Filtry kabinowe"], enItems: ["Engine oils", "Oil and fuel filters", "Air filters", "Cabin filters"] },
   { icon: Gauge, pl: "Zawieszenie i układ kierowniczy", en: "Suspension and steering", plItems: ["Amortyzatory", "Wahacze i tuleje", "Łożyska kół", "Końcówki drążków"], enItems: ["Shock absorbers", "Control arms and bushings", "Wheel bearings", "Tie rod ends"] },
-  { icon: SparkPlug, pl: "Elektryka", en: "Electrical", plItems: ["Akumulatory", "Świece i cewki", "Alternatory", "Czujniki"], enItems: ["Batteries", "Plugs and coils", "Alternators", "Sensors"] },
+  { icon: PlugZap, pl: "Elektryka", en: "Electrical", plItems: ["Akumulatory", "Świece i cewki", "Alternatory", "Czujniki"], enItems: ["Batteries", "Plugs and coils", "Alternators", "Sensors"] },
   { icon: Cog, pl: "Silnik i napęd", en: "Engine and drivetrain", plItems: ["Rozrząd", "Sprzęgła", "Paski i rolki", "Przeguby"], enItems: ["Timing systems", "Clutches", "Belts and pulleys", "CV joints"] },
   { icon: Lightbulb, pl: "Oświetlenie", en: "Lighting", plItems: ["Żarówki", "Reflektory", "Lampy tylne", "Moduły LED"], enItems: ["Bulbs", "Headlights", "Rear lights", "LED modules"] },
   { icon: Wind, pl: "Klimatyzacja i chłodzenie", en: "Climate and cooling", plItems: ["Chłodnice", "Pompy wody", "Termostaty", "Filtry kabinowe"], enItems: ["Radiators", "Water pumps", "Thermostats", "Cabin filters"] },
