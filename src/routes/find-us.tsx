@@ -1,0 +1,15 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ExternalLink, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { InquiryForm } from "@/components/inquiry-form";
+import { pick, useLanguage } from "@/lib/i18n";
+
+export const Route = createFileRoute("/find-us")({
+  head: () => ({ meta: [{ title: "Jak nas znaleźć — Auto Parts Store in Maldyty" }, { name: "description", content: "Mapa, adres i formularz kontaktowy Auto Parts Store in Maldyty, ul. Prusa 5." }, { property: "og:title", content: "Jak nas znaleźć — Auto Parts Store in Maldyty" }, { property: "og:description", content: "Odwiedź sklep przy ul. Prusa 5 w Małdytach lub wyślij zapytanie." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }),
+  component: FindUsPage,
+});
+
+function FindUsPage() { const { language } = useLanguage(); const mapUrl = "https://www.google.com/maps?q=ul.%20Prusa%205%2C%2014-330%20Ma%C5%82dyty&output=embed"; return <>
+  <section className="bg-dark text-dark-foreground"><div className="page-wrap page-section grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center"><div><p className="font-mono text-[11px] uppercase tracking-[0.16em] text-accent">{pick(language, { pl: "Jak nas znaleźć", en: "Find us" })}</p><h1 className="mt-3 text-4xl font-semibold sm:text-5xl">ul. Prusa 5<br />14-330 Małdyty</h1><p className="mt-5 max-w-md leading-relaxed text-dark-foreground/65">{pick(language, { pl: "Mapa prowadzi bezpośrednio pod wskazany adres sklepu.", en: "The map directs you straight to the store address." })}</p><Button variant="accent" asChild className="mt-7"><a href="https://www.google.com/maps/search/?api=1&query=ul.%20Prusa%205%2C%2014-330%20Ma%C5%82dyty" target="_blank" rel="noreferrer">{pick(language, { pl: "Otwórz trasę", en: "Open directions" })}<ExternalLink /></a></Button></div><div className="overflow-hidden rounded-lg bg-dark-foreground/5 p-2 ring-1 ring-dark-foreground/15"><iframe title="Map to Auto Parts Store in Maldyty" src={mapUrl} loading="lazy" className="h-[420px] w-full rounded-md border-0" referrerPolicy="no-referrer-when-downgrade" /></div></div></section>
+  <section id="inquiry" className="page-wrap page-section scroll-mt-24 grid gap-10 lg:grid-cols-[.75fr_1.25fr]"><div><p className="eyebrow">{pick(language, { pl: "Zapytanie o część", en: "Part inquiry" })}</p><h2 className="mt-3 text-3xl font-semibold">{pick(language, { pl: "Opisz, czego szukasz.", en: "Tell us what you need." })}</h2><p className="mt-4 leading-relaxed text-muted-foreground">{pick(language, { pl: "Podaj dane auta i szukaną część. Po podłączeniu bota wiadomość trafi bezpośrednio do sklepu w Telegramie.", en: "Provide your vehicle details and required part. Once the bot is connected, the message goes directly to the store via Telegram." })}</p><div className="mt-6 flex items-start gap-3 text-sm"><MapPin className="mt-0.5 shrink-0 text-primary" /><span>ul. Prusa 5<br />14-330 Małdyty, Polska</span></div></div><InquiryForm /></section>
+  </>; }
